@@ -1,4 +1,6 @@
 import { imgCollection } from '../modules/imgObject';
+import './styles.css';
+
 let imageContainer = document.querySelector('.image-container');
 let leftArrow =  document.querySelector('.item1');
 let rightArrow = document.querySelector('.item2');
