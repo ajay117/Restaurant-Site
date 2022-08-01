@@ -1,5 +1,7 @@
 import menuImg from "../assets/images/menu.svg";
 import closeImg from "../assets/images/close.svg";
+import introContainer from "./intro";
+import addMenu from "./menu";
 
 export default function addNav() {
   let nav = document.createElement("nav");
@@ -60,13 +62,30 @@ export default function addNav() {
     //   nav.classList.remove('hide');
   });
 
+  listHome.addEventListener("click", () => {
+    menuItemDiv.classList.remove("show-menu");
+
+    let contentDiv = document.querySelector(".content");
+    let introDiv = contentDiv.querySelector(".intro");
+    if (introDiv) {
+      contentDiv.removeChild(introDiv);
+      console.log("remove");
+    }
+
+    contentDiv.appendChild(introContainer());
+  });
+
+  listMenu.addEventListener("click", () => {
+    menuItemDiv.classList.remove("show-menu");
+    let contentDiv = document.querySelector(".content");
+
+    let introDiv = contentDiv.querySelector(".intro");
+    if (introDiv) {
+      contentDiv.removeChild(introDiv);
+      console.log("remove");
+    }
+    contentDiv.appendChild(addMenu());
+  });
+
   return nav;
 }
-
-// let nav = document.querySelector("nav");
-// let hamburger = document.querySelector(".hamburger");
-// let closeBtn = document.querySelector(".close-btn");
-// let menuItem = document.querySelector(".menu-item");
-
-// hamburger.src = menuImg;
-// closeBtn.src = closeImg;
