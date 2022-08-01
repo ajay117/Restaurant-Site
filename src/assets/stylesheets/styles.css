@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --fs-small: 14px;
+  --fs-medium: 18px;
+  --fs-large: 22px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+
+/* || Nav */
+.padded-container {
+  padding: 0 10px;
+}
+.hamburger,
+.close-btn {
+  width: 30px;
+}
+.brand-name {
+  font-size: 22px;
+}
+.menu-item {
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: 1000px;
+  /* opacity: 0; */
+  transition: all 0.7s ease;
+}
+ul {
+  list-style-type: none;
+  /* margin: 0; */
+  padding: 0;
+}
+li {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: var(--fs-medium);
+}
+
+.align-right {
+  text-align: right;
+}
+.menu-item.show-menu {
+  opacity: 1;
+  left: 0px;
+}
