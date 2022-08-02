@@ -15,7 +15,12 @@ export default function addMenu() {
 
   menu.forEach((item) => {
     let li = document.createElement("li");
-    li.textContent = item;
+    let navLink = document.createElement("a");
+    // li.textContent = item;
+    navLink.textContent = item;
+    navLink.href = "#";
+
+    li.appendChild(navLink);
     ul.appendChild(li);
   });
 
