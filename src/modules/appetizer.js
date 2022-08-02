@@ -1,3 +1,3 @@
 export default function addAppetizer() {
-  console.log("Appetizer");
+    console.log("Appetizer")
 }
