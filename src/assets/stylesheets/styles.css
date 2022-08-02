@@ -9,7 +9,7 @@
   --fs-large: 22px;
 }
 body {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .flex {
@@ -85,6 +85,26 @@ li {
   animation-name: animate;
   animation-duration: 2s;
 }
+.responsive {
+  width: 200px;
+  height: auto;
+}
+.box {
+  width: 320px;
+  height: auto;
+  text-align: center;
+  flex: auto;
+  border: 1px solid black;
+  padding: 30px 0 10px;
+  margin: 20px 10px;
+  /* overflow: hidden; */
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @keyframes animate {
   0% {
     top: 200px;
