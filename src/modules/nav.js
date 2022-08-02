@@ -1,6 +1,5 @@
 import menuImg from "../assets/images/menu.svg";
 import closeImg from "../assets/images/close.svg";
-import introContainer from "./intro";
 import addMenu from "./menu";
 import addAbout from "./about";
 import addHome from "./home";
