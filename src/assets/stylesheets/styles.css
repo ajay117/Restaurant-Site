@@ -71,6 +71,6 @@ li {
   opacity: 1;
   left: 0px;
 }
-/* .container-menu li {
-  border: 1px solid black;
-} */
+.nav-link-container li {
+  cursor: pointer;
+}
