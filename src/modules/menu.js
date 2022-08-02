@@ -1,3 +1,6 @@
+import addAppetizer from "./appetizer";
+import addDrinksAndDessert from "./drinksAndDessert";
+import addMainDish from "./mainDish";
 import addNav from "./nav";
 
 export default function addMenu() {
@@ -8,7 +11,7 @@ export default function addMenu() {
 
   let menuContainer = document.createElement("div");
   let heading = document.createElement("h3");
-  let menu = ["Main", "Appetizer", "Drinks", "Dessert"];
+  let menu = ["Main", "Appetizer", "Drinks & Dessert"];
   let ul = document.createElement("ul");
 
   heading.textContent = "Category";
@@ -16,13 +19,30 @@ export default function addMenu() {
   menu.forEach((item) => {
     let li = document.createElement("li");
     let navLink = document.createElement("a");
-    // li.textContent = item;
     navLink.textContent = item;
     navLink.href = "#";
 
+    if(item === "Main") {
+      navLink.addEventListener('click', () => {
+        addMainDish();
+      })
+    }
+    if(item === "Appetizer") {
+      navLink.addEventListener('click', () => {
+        addAppetizer();
+      })
+    }
+    if (item === "Drinks & Dessert") {
+      item = "drinks";
+      navLink.addEventListener('click', () => {
+        addDrinksAndDessert();
+      })
+    }
+    navLink.classList.add(item.toLowerCase());
     li.appendChild(navLink);
     ul.appendChild(li);
   });
+
 
   menuContainer.classList.add("container-menu");
 
