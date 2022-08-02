@@ -1,6 +1,6 @@
 export default function introContainer() {
   let introDiv = document.createElement("div");
-  let heading = document.createElement("h1");
+  let heading = document.createElement("h3");
   let para = document.createElement("p");
 
   heading.textContent = "Lorem ipsum dolor sit amet";
