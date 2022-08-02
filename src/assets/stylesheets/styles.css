@@ -20,7 +20,9 @@ body {
 .hide {
   display: none;
 }
-
+.content {
+  padding-top: 10px;
+}
 /* || Nav */
 .padded-container {
   padding: 0 10px;
@@ -46,7 +48,6 @@ body {
 }
 ul {
   list-style-type: none;
-  /* margin: 0; */
   padding: 0;
 }
 .menu-item li:not(:nth-child(1)) {
@@ -64,11 +65,10 @@ li {
   font-size: 1.2rem;
 }
 .container-menu {
-  position: relative;
-  left: -1000px;
-  opacity: 0;
+  opacity: 1;
   padding: 0 10px;
-  transition: all 0.15s ease;
+  transition: all 0.7s ease;
+  text-align: center;
 }
 .show-menu {
   opacity: 1;
@@ -76,4 +76,21 @@ li {
 }
 .nav-link-container li {
   cursor: pointer;
+}
+
+.intro {
+  position: relative;
+}
+.animate {
+  animation-name: animate;
+  animation-duration: 2s;
+}
+@keyframes animate {
+  0% {
+    top: 200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+  }
 }
