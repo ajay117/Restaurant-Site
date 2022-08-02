@@ -67,9 +67,14 @@ export default function addNav() {
 
     let contentDiv = document.querySelector(".content");
     let introDiv = contentDiv.querySelector(".intro");
+    let menuContainer = contentDiv.querySelector(".container-menu");
+
     if (introDiv) {
       contentDiv.removeChild(introDiv);
       console.log("remove");
+    }
+    if (menuContainer) {
+      contentDiv.removeChild(menuContainer);
     }
 
     contentDiv.appendChild(introContainer());
@@ -80,11 +85,20 @@ export default function addNav() {
     let contentDiv = document.querySelector(".content");
 
     let introDiv = contentDiv.querySelector(".intro");
+    let menuContainer = contentDiv.querySelector(".container-menu");
+
     if (introDiv) {
       contentDiv.removeChild(introDiv);
-      console.log("remove");
     }
-    contentDiv.appendChild(addMenu());
+    if (menuContainer) {
+      contentDiv.removeChild(menuContainer);
+    }
+
+    let menu = addMenu();
+    contentDiv.appendChild(menu);
+    setTimeout(function () {
+      menu.classList.add("show-menu");
+    }, 100);
   });
 
   return nav;
