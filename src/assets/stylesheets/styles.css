@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
 *,
 *::before,
 *::after {
@@ -22,6 +25,12 @@ body {
 }
 .content {
   padding-top: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255 255 255 / 70%);
 }
 /* || Nav */
 .padded-container {
@@ -34,6 +43,7 @@ body {
 }
 .brand-name {
   font-size: 22px;
+  font-family: "Roboto", sans-serif;
 }
 .menu-item {
   position: absolute;
@@ -80,6 +90,15 @@ li {
 
 .intro {
   position: relative;
+  margin-top: 80px;
+}
+.intro h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+}
+.intro p {
+  font-family: "Merriweather", serif;
+  font-size: 25px;
 }
 .animate {
   animation-name: animate;
@@ -104,6 +123,25 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
+.video-container {
+  width: 100vw;
+  height: 100vh;
+}
+iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  /* opacity: ; */
+}
+.btn-info {
+  padding: 10px 40px;
+  border-radius: 15px;
+  font-size: 18px;
+  /* margin-top: 10px; */
+}
 
 @keyframes animate {
   0% {
@@ -112,5 +150,17 @@ li {
   }
   100% {
     top: 0px;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-container iframe {
+    height: 56.25vw;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    width: 177.78vh;
   }
 }
