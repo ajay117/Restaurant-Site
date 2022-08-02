@@ -1,4 +1,11 @@
+import addNav from "./nav";
+
 export default function addMenu() {
+  let contentDiv = document.querySelector(".content");
+  if (contentDiv.innerHTML) {
+    contentDiv.innerHTML = "";
+  }
+
   let menuContainer = document.createElement("div");
   let heading = document.createElement("h3");
   let menu = ["Main", "Appetizer", "Drinks", "Dessert"];
@@ -16,5 +23,11 @@ export default function addMenu() {
 
   menuContainer.appendChild(heading);
   menuContainer.appendChild(ul);
-  return menuContainer;
+
+  contentDiv.appendChild(addNav());
+  contentDiv.appendChild(menuContainer);
+
+  setTimeout(() => {
+    menuContainer.classList.add("show-menu");
+  }, 100);
 }

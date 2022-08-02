@@ -3,6 +3,7 @@ import closeImg from "../assets/images/close.svg";
 import introContainer from "./intro";
 import addMenu from "./menu";
 import addAbout from "./about";
+import addHome from "./home";
 
 export default function addNav() {
   let nav = document.createElement("nav");
@@ -65,64 +66,70 @@ export default function addNav() {
   });
 
   listHome.addEventListener("click", () => {
-    menuItemDiv.classList.remove("show-menu");
+    // menuItemDiv.classList.remove("show-menu");
 
-    let contentDiv = document.querySelector(".content");
-    let introDiv = contentDiv.querySelector(".intro");
-    let menuContainer = contentDiv.querySelector(".container-menu");
+    // let contentDiv = document.querySelector(".content");
+    // let introDiv = contentDiv.querySelector(".intro");
+    // let menuContainer = contentDiv.querySelector(".container-menu");
 
-    if (introDiv) {
-      contentDiv.removeChild(introDiv);
-      console.log("remove");
-    }
-    if (menuContainer) {
-      contentDiv.removeChild(menuContainer);
-    }
+    // if (introDiv) {
+    //   contentDiv.removeChild(introDiv);
+    //   console.log("remove");
+    // }
+    // if (menuContainer) {
+    //   contentDiv.removeChild(menuContainer);
+    // }
 
-    contentDiv.appendChild(introContainer());
+    // contentDiv.appendChild(introContainer());
+
+    addHome();
+
   });
 
   listMenu.addEventListener("click", () => {
-    menuItemDiv.classList.remove("show-menu");
-    let contentDiv = document.querySelector(".content");
+    // menuItemDiv.classList.remove("show-menu");
+    // let contentDiv = document.querySelector(".content");
 
-    let introDiv = contentDiv.querySelector(".intro");
-    let menuContainer = contentDiv.querySelector(".container-menu");
+    // let introDiv = contentDiv.querySelector(".intro");
+    // let menuContainer = contentDiv.querySelector(".container-menu");
 
-    if (introDiv) {
-      contentDiv.removeChild(introDiv);
-    }
-    if (menuContainer) {
-      contentDiv.removeChild(menuContainer);
-    }
+    // if (introDiv) {
+    //   contentDiv.removeChild(introDiv);
+    // }
+    // if (menuContainer) {
+    //   contentDiv.removeChild(menuContainer);
+    // }
 
-    let menu = addMenu();
-    contentDiv.appendChild(menu);
-    setTimeout(function () {
-      menu.classList.add("show-menu");
-    }, 100);
-  });
-
-  listAbout.addEventListener("click", () => {
-    menuItemDiv.classList.remove("show-menu");
-    let contentDiv = document.querySelector(".content");
-
-    let introDiv = contentDiv.querySelector(".intro");
-    let menuContainer = contentDiv.querySelector(".container-menu");
-
-    if (introDiv) {
-      contentDiv.removeChild(introDiv);
-    }
-    if (menuContainer) {
-      contentDiv.removeChild(menuContainer);
-    }
-
-    let about = addAbout();
-    contentDiv.appendChild(about);
+    // let menu = addMenu();
+    // contentDiv.appendChild(menu);
     // setTimeout(function () {
     //   menu.classList.add("show-menu");
     // }, 100);
+
+    addMenu();
+    
   });
+
+  // listAbout.addEventListener("click", () => {
+  //   menuItemDiv.classList.remove("show-menu");
+  //   let contentDiv = document.querySelector(".content");
+
+  //   let introDiv = contentDiv.querySelector(".intro");
+  //   let menuContainer = contentDiv.querySelector(".container-menu");
+
+  //   if (introDiv) {
+  //     contentDiv.removeChild(introDiv);
+  //   }
+  //   if (menuContainer) {
+  //     contentDiv.removeChild(menuContainer);
+  //   }
+
+  //   let about = addAbout();
+  //   contentDiv.appendChild(about);
+  //   // setTimeout(function () {
+  //   //   menu.classList.add("show-menu");
+  //   // }, 100);
+  // });
 
   return nav;
 }
