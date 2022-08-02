@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --fs-small: 14px;
+  --fs-medium: 18px;
+  --fs-large: 22px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+
+/* || Nav */
+.padded-container {
+  padding: 0 10px;
+}
+.hamburger,
+.close-btn {
+  width: 30px;
+  cursor: pointer;
+}
+.brand-name {
+  font-size: 22px;
+}
+.menu-item {
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: 1000px;
+  opacity: 0;
+  transition: all 0.8s ease;
+  z-index: 1;
+}
+ul {
+  list-style-type: none;
+  /* margin: 0; */
+  padding: 0;
+}
+.menu-item li:not(:nth-child(1)) {
+  text-align: center;
+}
+li {
+  padding-bottom: 10px;
+  font-size: var(--fs-medium);
+}
+
+.align-right {
+  text-align: right;
+}
+.menu-item li:hover {
+  font-size: 1.2rem;
+}
+.container-menu {
+  position: relative;
+  left: -1000px;
+  opacity: 0;
+  padding: 0 10px;
+  transition: all 0.15s ease;
+}
+.show-menu {
+  opacity: 1;
+  left: 0px;
+}
+.nav-link-container li {
+  cursor: pointer;
+}
