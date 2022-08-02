@@ -4,6 +4,7 @@ import introContainer from "./intro";
 import addMenu from "./menu";
 import addAbout from "./about";
 import addHome from "./home";
+import addContact from "./contact";
 
 export default function addNav() {
   let nav = document.createElement("nav");
@@ -66,70 +67,24 @@ export default function addNav() {
   });
 
   listHome.addEventListener("click", () => {
-    // menuItemDiv.classList.remove("show-menu");
-
-    // let contentDiv = document.querySelector(".content");
-    // let introDiv = contentDiv.querySelector(".intro");
-    // let menuContainer = contentDiv.querySelector(".container-menu");
-
-    // if (introDiv) {
-    //   contentDiv.removeChild(introDiv);
-    //   console.log("remove");
-    // }
-    // if (menuContainer) {
-    //   contentDiv.removeChild(menuContainer);
-    // }
-
-    // contentDiv.appendChild(introContainer());
-
     addHome();
-
   });
 
   listMenu.addEventListener("click", () => {
-    // menuItemDiv.classList.remove("show-menu");
-    // let contentDiv = document.querySelector(".content");
+    addMenu();
+  });
 
-    // let introDiv = contentDiv.querySelector(".intro");
-    // let menuContainer = contentDiv.querySelector(".container-menu");
+  listAbout.addEventListener("click", () => {
 
-    // if (introDiv) {
-    //   contentDiv.removeChild(introDiv);
-    // }
-    // if (menuContainer) {
-    //   contentDiv.removeChild(menuContainer);
-    // }
-
-    // let menu = addMenu();
-    // contentDiv.appendChild(menu);
+    let about = addAbout();
     // setTimeout(function () {
     //   menu.classList.add("show-menu");
     // }, 100);
-
-    addMenu();
-    
   });
 
-  // listAbout.addEventListener("click", () => {
-  //   menuItemDiv.classList.remove("show-menu");
-  //   let contentDiv = document.querySelector(".content");
-
-  //   let introDiv = contentDiv.querySelector(".intro");
-  //   let menuContainer = contentDiv.querySelector(".container-menu");
-
-  //   if (introDiv) {
-  //     contentDiv.removeChild(introDiv);
-  //   }
-  //   if (menuContainer) {
-  //     contentDiv.removeChild(menuContainer);
-  //   }
-
-  //   let about = addAbout();
-  //   contentDiv.appendChild(about);
-  //   // setTimeout(function () {
-  //   //   menu.classList.add("show-menu");
-  //   // }, 100);
-  // });
+  listContact.addEventListener('click', () => {
+    addContact();
+  })
 
   return nav;
 }
