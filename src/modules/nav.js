@@ -42,10 +42,15 @@ export default function addNav() {
   listCloseBtn.appendChild(closeBtnImage);
   ul.appendChild(listCloseBtn);
 
-  listHome.textContent = "HOME";
-  listMenu.textContent = "MENU";
-  listAbout.textContent = "ABOUT";
-  listContact.textContent = "CONTACT";
+  listHome.innerHTML = '<a href="#">HOME</a>';
+  listMenu.innerHTML = '<a href="#">MENU</a>';
+  listAbout.innerHTML = '<a href="#">ABOUT</a>';
+  listContact.innerHTML = '<a href="#">CONTACT</a>';
+
+  let homeLink = listHome.querySelector("a");
+  let menuLink = listMenu.querySelector("a");
+  let aboutLink = listAbout.querySelector("a");
+  let contactLink = listContact.querySelector("a");
 
   ul.appendChild(listHome);
   ul.appendChild(listMenu);
@@ -66,25 +71,21 @@ export default function addNav() {
     //   nav.classList.remove('hide');
   });
 
-  listHome.addEventListener("click", () => {
+  homeLink.addEventListener("click", () => {
     addHome();
   });
 
-  listMenu.addEventListener("click", () => {
+  menuLink.addEventListener("click", () => {
     addMenu();
   });
 
-  listAbout.addEventListener("click", () => {
-
-    let about = addAbout();
-    // setTimeout(function () {
-    //   menu.classList.add("show-menu");
-    // }, 100);
+  aboutLink.addEventListener("click", () => {
+    addAbout();
   });
 
-  listContact.addEventListener('click', () => {
+  contactLink.addEventListener("click", () => {
     addContact();
-  })
+  });
 
   return nav;
 }
