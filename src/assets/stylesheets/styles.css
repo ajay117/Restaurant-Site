@@ -8,6 +8,9 @@
   --fs-medium: 18px;
   --fs-large: 22px;
 }
+body {
+  overflow: hidden;
+}
 
 .flex {
   display: flex;
