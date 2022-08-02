@@ -14,7 +14,7 @@ export default function addMenu() {
   let menu = ["Main", "Appetizer", "Drinks & Dessert"];
   let ul = document.createElement("ul");
 
-  heading.textContent = "Category";
+  heading.textContent = "Our Services:-";
 
   menu.forEach((item) => {
     let li = document.createElement("li");

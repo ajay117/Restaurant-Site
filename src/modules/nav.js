@@ -27,6 +27,7 @@ export default function addNav() {
   closeBtnImage.alt = "";
   closeBtnImage.classList.add("close-btn");
 
+  nav.classList.add("mt-sm");
   nav.classList.add("padded-container");
   nav.classList.add("flex");
   brandNameDiv.classList.add("brand-name");
@@ -61,6 +62,10 @@ export default function addNav() {
   nav.appendChild(brandNameDiv);
   nav.appendChild(hamburgerDiv);
   nav.appendChild(menuItemDiv);
+
+  brandNameDiv.addEventListener("click", () => {
+    addHome();
+  });
 
   hamburgerImage.addEventListener("click", () => {
     menuItemDiv.classList.add("show-menu");

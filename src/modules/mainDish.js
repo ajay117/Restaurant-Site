@@ -20,15 +20,19 @@ export default function addMainDish() {
     let title = document.createElement("p");
     let price = document.createElement("p");
 
-    heading.textContent = "Lorem ipsum dolor";
+    heading.textContent = "Main Dish";
     heading.classList.add("padded-container");
+    heading.classList.add("mt-md");
 
     img.src = one.src;
     img.alt = "";
     img.classList.add("responsive");
 
     title.textContent = one.name;
+    title.classList.add("dish-name");
+
     price.textContent = `Rs. ${one.price}`;
+    price.classList.add("dish-price");
 
     div.appendChild(img);
     div.appendChild(title);
@@ -41,7 +45,7 @@ export default function addMainDish() {
     parentDiv.appendChild(div);
   });
 
-//   parentDiv.classList.add("padded-container")
+  //   parentDiv.classList.add("padded-container")
   contentDiv.appendChild(addNav());
   contentDiv.appendChild(heading);
   contentDiv.appendChild(parentDiv);
