@@ -26,8 +26,4 @@ export default function addMenu() {
 
   contentDiv.appendChild(addNav());
   contentDiv.appendChild(menuContainer);
-
-  setTimeout(() => {
-    menuContainer.classList.add("show-menu");
-  }, 100);
 }
