@@ -38,15 +38,18 @@
   top: -10px;
   left: 1000px;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
+  z-index: 1;
 }
 ul {
   list-style-type: none;
   /* margin: 0; */
   padding: 0;
 }
-li {
+.menu-item li:not(:nth-child(1)) {
   text-align: center;
+}
+li {
   padding-bottom: 10px;
   font-size: var(--fs-medium);
 }
@@ -54,10 +57,20 @@ li {
 .align-right {
   text-align: right;
 }
-.menu-item.show-menu {
-  opacity: 1;
-  left: 0px;
-}
 .menu-item li:hover {
   font-size: 1.2rem;
 }
+.container-menu {
+  position: relative;
+  left: -1000px;
+  opacity: 0;
+  padding: 0 10px;
+  transition: all 0.15s ease;
+}
+.show-menu {
+  opacity: 1;
+  left: 0px;
+}
+/* .container-menu li {
+  border: 1px solid black;
+} */
