@@ -33,6 +33,9 @@ body {
   background-color: rgb(255 255 255 / 70%);
 }
 /* || Nav */
+button {
+  color: #000000;
+}
 .padded-container {
   padding: 0 10px;
 }
@@ -170,7 +173,8 @@ li {
   width: 100vw;
   height: 100vh;
 }
-iframe {
+iframe,
+.background {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -192,6 +196,11 @@ iframe {
 .mt-sm {
   margin-top: 10px;
 }
+.background {
+  background: #fff
+    url("https://img.buzzfeed.com/buzzfeed-static/static/2014-09/23/12/enhanced/webdr08/longform-original-4996-1411490556-10.jpg?downsize=600:*&output-format=auto&output-quality=auto")
+    center center/cover no-repeat;
+}
 
 @keyframes animate {
   0% {
@@ -212,5 +221,11 @@ iframe {
 @media (max-aspect-ratio: 16/9) {
   .video-container iframe {
     width: 177.78vh;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-width: 800px) {
+  .video-container {
+    display: none;
   }
 }
