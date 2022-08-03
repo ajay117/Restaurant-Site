@@ -22,27 +22,27 @@ export default function addMenu() {
     navLink.textContent = item;
     navLink.href = "#";
 
-    if(item === "Main") {
-      navLink.addEventListener('click', () => {
+    if (item === "Main") {
+      navLink.addEventListener("click", () => {
         addMainDish();
-      })
+      });
     }
-    if(item === "Appetizer") {
-      navLink.addEventListener('click', () => {
+    if (item === "Appetizer") {
+      navLink.addEventListener("click", () => {
         addAppetizer();
-      })
+      });
     }
     if (item === "Drinks & Dessert") {
+      //This is a class name for "Drinks and Dessert"
       item = "drinks";
-      navLink.addEventListener('click', () => {
+      navLink.addEventListener("click", () => {
         addDrinksAndDessert();
-      })
+      });
     }
     navLink.classList.add(item.toLowerCase());
     li.appendChild(navLink);
     ul.appendChild(li);
   });
-
 
   menuContainer.classList.add("container-menu");
 
