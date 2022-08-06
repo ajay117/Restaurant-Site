@@ -1,7 +1,6 @@
 import addNav from "./nav";
 import backArrow from "../assets/images/arrow-left.svg";
 import addMainDish from "./mainDish";
-import state from "./state";
 import containsObject from "../utility/containsObject";
 import { mainDishes } from "../menuObj/mainDishes";
 import { dessertAndDrinks } from "../menuObj/dessertAndDrinks";
