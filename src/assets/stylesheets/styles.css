@@ -1,10 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 :root {
   --fs-small: 14px;
@@ -19,14 +27,22 @@ footer {
   z-index: 1;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
   opacity: 0.5;
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .hide {
   display: none;
@@ -65,11 +81,15 @@ button {
   font-size: 22px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .brand-name:hover,
 .brand-name:active {
-  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 .menu-item {
   position: absolute;
@@ -79,6 +99,8 @@ button {
   top: -10px;
   left: 1000px;
   opacity: 0;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
   z-index: 1;
 }
@@ -103,6 +125,8 @@ li {
 .container-menu {
   opacity: 1;
   padding: 0 10px;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
   transition: all 0.7s ease;
   text-align: left;
   margin-top: 50px;
@@ -154,12 +178,16 @@ li {
   font-size: 25px;
 }
 .animate {
-  animation-name: animate;
-  animation-duration: 2s;
+  -webkit-animation-name: animate;
+          animation-name: animate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 .animate-left {
-  animation-name: animate-left;
-  animation-duration: 1s;
+  -webkit-animation-name: animate-left;
+          animation-name: animate-left;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 .responsive {
   border-radius: 50%;
@@ -171,7 +199,9 @@ li {
   background-color: rgba(241, 243, 243, 0.7);
   width: 320px;
   height: auto;
-  flex: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   padding: 30px 0 20px;
   margin: 20px 10px;
 }
@@ -182,9 +212,14 @@ li {
 }
 
 .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   opacity: 0.3;
+  -webkit-transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
   transition: all 1.5s ease;
 }
 .video-container {
@@ -198,10 +233,14 @@ iframe,
   left: 50%;
   width: 100vw;
   height: 100vh;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   /* opacity: ; */
 }
 button {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .btn-info {
@@ -217,7 +256,9 @@ button {
 }
 
 button:hover {
-  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 .mt-md {
   margin-top: 30px;
@@ -238,6 +279,8 @@ button:hover {
   opacity: 0.3;
   margin: 0 auto;
   background-color: rgba(255, 251, 251, 0.7);
+  -webkit-transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
   transition: all 1.5s ease;
 }
 .box-img {
@@ -257,6 +300,16 @@ button:hover {
   opacity: 1;
 }
 
+@-webkit-keyframes animate {
+  0% {
+    top: 200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
 @keyframes animate {
   0% {
     top: 200px;
@@ -264,6 +317,16 @@ button:hover {
   }
   100% {
     top: 0px;
+  }
+}
+@-webkit-keyframes animate-left {
+  0% {
+    left: 100px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
   }
 }
 @keyframes animate-left {
