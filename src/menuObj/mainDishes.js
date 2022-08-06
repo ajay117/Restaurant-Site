@@ -1,6 +1,6 @@
 export const mainDishes = [
   {
-    name: "Palak Paneer/Saag Paneer",
+    name: "Palak Paneer",
     src: "https://img.buzzfeed.com/buzzfeed-static/static/2014-09/23/13/enhanced/webdr04/enhanced-11174-1411493963-11.jpg?downsize=600:*&output-format=auto&output-quality=auto",
     description:
       "Palak paneer is what Popeye would eat if he ate Indian food. It's cooked spinach with a soft, fresh white cheese called paneer, and it's amazing. You might also know this dish as saag paneer. 'Palak' is the Hindi word for spinich, while 'saag' means greens, so the two terms are somewhat overlapping.",

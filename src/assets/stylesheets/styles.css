@@ -43,7 +43,8 @@ button {
   padding: 0 10px;
 }
 .hamburger,
-.close-btn {
+.close-btn,
+.back-arrow {
   width: 30px;
   cursor: pointer;
 }
@@ -127,9 +128,9 @@ li {
   cursor: pointer;
 }
 
-.intro {
+.intro,
+.container-menu {
   position: relative;
-  margin-top: 80px;
 }
 .intro h3 {
   font-family: "Roboto", sans-serif;
@@ -143,6 +144,10 @@ li {
   animation-name: animate;
   animation-duration: 2s;
 }
+.animate-left {
+  animation-name: animate-left;
+  animation-duration: 1s;
+}
 .responsive {
   border-radius: 50%;
   width: 300px;
@@ -154,7 +159,7 @@ li {
   width: 320px;
   height: auto;
   flex: auto;
-  padding: 30px 0 10px;
+  padding: 30px 0 20px;
   margin: 20px 10px;
 }
 .dish-name {
@@ -162,21 +167,12 @@ li {
   font-weight: 700;
   letter-spacing: 1px;
 }
-.dish-price {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
 
 .box-container {
   display: flex;
   flex-wrap: wrap;
-
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px; */
+  opacity: 0.3;
+  transition: all 1.5s ease;
 }
 .video-container {
   width: 100vw;
@@ -192,12 +188,23 @@ iframe,
   transform: translate(-50%, -50%);
   /* opacity: ; */
 }
+button {
+  transition: all 0.3s ease;
+}
 .btn-info {
   padding: 10px 40px;
   border-radius: 15px;
   font-size: 18px;
   cursor: pointer;
   /* margin-top: 10px; */
+}
+.btn-order {
+  padding: 7px 30px;
+  border-radius: 30px;
+}
+
+button:hover {
+  transform: scale(0.9);
 }
 .mt-md {
   margin-top: 30px;
@@ -215,8 +222,10 @@ iframe,
   padding: 10px 10px 20px;
   max-width: 810px;
   text-align: center;
+  opacity: 0.3;
   margin: 0 auto;
   background-color: rgba(255, 251, 251, 0.7);
+  transition: all 1.5s ease;
 }
 .box-img {
   border-radius: 50%;
@@ -231,6 +240,9 @@ iframe,
   text-align: left;
   padding: 0 15px;
 }
+.opaque {
+  opacity: 1;
+}
 
 @keyframes animate {
   0% {
@@ -239,6 +251,16 @@ iframe,
   }
   100% {
     top: 0px;
+  }
+}
+@keyframes animate-left {
+  0% {
+    left: 100px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
   }
 }
 

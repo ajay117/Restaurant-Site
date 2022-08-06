@@ -45,6 +45,7 @@ export default function addMenu() {
   });
 
   menuContainer.classList.add("container-menu");
+  menuContainer.classList.add("animate-left");
 
   menuContainer.appendChild(heading);
   menuContainer.appendChild(ul);

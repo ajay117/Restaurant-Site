@@ -29,10 +29,6 @@ export default function addHome() {
   introDiv.classList.add("intro");
   introDiv.classList.add("padded-container");
 
-  // contentDiv.innerHTML =
-  //   '<div class="video-container"><iframesrc="https://www.youtube.com/embed/f7MHvMsDnPM?controls=0&autoplay=1&mute=1&playlist=f7MHvMsDnPM&loop=1"></iframe></div><div class="content"></div>';
-
-  // contentDiv.appendChild(addVideoBackground());
   contentDiv.appendChild(addNav());
   contentDiv.appendChild(introDiv);
 }
