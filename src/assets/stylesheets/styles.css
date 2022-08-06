@@ -14,6 +14,14 @@
 body {
   overflow-x: hidden;
 }
+footer {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0.5;
+}
 
 .flex {
   display: flex;
