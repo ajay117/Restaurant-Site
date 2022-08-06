@@ -33,6 +33,9 @@ body {
   background-color: rgb(255 255 255 / 70%);
 }
 /* || Nav */
+nav {
+  margin-bottom: 80px;
+}
 button {
   color: #000000;
 }
@@ -141,18 +144,18 @@ li {
   animation-duration: 2s;
 }
 .responsive {
-  width: 200px;
-  height: auto;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
 }
 .box {
+  text-align: center;
+  background-color: rgba(241, 243, 243, 0.7);
   width: 320px;
   height: auto;
-  text-align: center;
   flex: auto;
-  border: 1px solid black;
   padding: 30px 0 10px;
   margin: 20px 10px;
-  /* overflow: hidden; */
 }
 .dish-name {
   font-size: 20px;
@@ -168,6 +171,12 @@ li {
 .box-container {
   display: flex;
   flex-wrap: wrap;
+
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px; */
 }
 .video-container {
   width: 100vw;
@@ -200,6 +209,27 @@ iframe,
   background: #fff
     url("https://img.buzzfeed.com/buzzfeed-static/static/2014-09/23/12/enhanced/webdr08/longform-original-4996-1411490556-10.jpg?downsize=600:*&output-format=auto&output-quality=auto")
     center center/cover no-repeat;
+}
+
+.box-description {
+  padding: 10px 10px 20px;
+  max-width: 810px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgba(255, 251, 251, 0.7);
+}
+.box-img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+.description-heading {
+  font-size: clamp(25px, 4vw, 40px);
+}
+.description-para {
+  font-size: max(20px, 3vw);
+  text-align: left;
+  padding: 0 15px;
 }
 
 @keyframes animate {
