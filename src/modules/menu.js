@@ -33,7 +33,6 @@ export default function addMenu() {
       });
     }
     if (item === "Drinks & Dessert") {
-      //This is a class name for "Drinks and Dessert"
       item = "drinks";
       navLink.addEventListener("click", () => {
         addDrinksAndDessert();

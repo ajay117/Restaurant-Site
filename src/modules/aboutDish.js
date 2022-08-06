@@ -1,6 +1,13 @@
 import addNav from "./nav";
 import backArrow from "../assets/images/arrow-left.svg";
 import addMainDish from "./mainDish";
+import state from "./state";
+import containsObject from "../utility/containsObject";
+import { mainDishes } from "../menuObj/mainDishes";
+import { dessertAndDrinks } from "../menuObj/dessertAndDrinks";
+import { appetizer } from "../menuObj/appetizer";
+import addDrinksAndDessert from "./drinksAndDessert";
+import addAppetizer from "./appetizer";
 
 //objIndex is the index of individual dish..
 export default function addDishDescription(obj) {
@@ -21,7 +28,9 @@ export default function addDishDescription(obj) {
   backArrowImg.setAttribute("alt", "");
   backArrowImg.classList.add("back-arrow");
   backArrowImg.addEventListener("click", () => {
-    addMainDish();
+    if (containsObject(obj, mainDishes)) addMainDish();
+    if (containsObject(obj, dessertAndDrinks)) addDrinksAndDessert();
+    if (containsObject(obj, appetizer)) addAppetizer();
   });
 
   heading.textContent = obj.name;
