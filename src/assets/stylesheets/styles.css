@@ -57,6 +57,11 @@ button {
   font-size: 22px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.brand-name:hover,
+.brand-name:active {
+  transform: scale(0.9);
 }
 .menu-item {
   position: absolute;
