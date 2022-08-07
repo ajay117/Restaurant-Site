@@ -83,8 +83,10 @@ button {
   border-radius: 50%;
 }
 .hamburger:active,
-.close-btn:active {
-  width: 27px;
+.close-btn:active,
+.back-arrow:active,
+.arrow-up:active {
+  transform: scale(0.7);
 }
 
 .brand-name {
