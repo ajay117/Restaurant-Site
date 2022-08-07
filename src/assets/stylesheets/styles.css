@@ -12,7 +12,7 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 :root {
   --fs-small: 14px;
@@ -28,8 +28,8 @@ footer {
   bottom: 0;
   left: 50%;
   -webkit-transform: translate(-50%);
-      -ms-transform: translate(-50%);
-          transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
   opacity: 0.5;
 }
 
@@ -38,11 +38,11 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .hide {
   display: none;
@@ -100,8 +100,8 @@ button {
 .brand-name:hover,
 .brand-name:active {
   -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
 }
 .menu-item {
   position: absolute;
@@ -109,11 +109,11 @@ button {
   width: 100%;
   height: 100%;
   top: -10px;
-  left: 1000px;
+  left: 10000px;
   opacity: 0;
   -webkit-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  transition: all 0.3s ease;
   z-index: 1;
 }
 ul {
@@ -191,15 +191,15 @@ li {
 }
 .animate {
   -webkit-animation-name: animate;
-          animation-name: animate;
+  animation-name: animate;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
 }
 .animate-left {
   -webkit-animation-name: animate-left;
-          animation-name: animate-left;
+  animation-name: animate-left;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 .responsive {
   border-radius: 50%;
@@ -212,8 +212,8 @@ li {
   width: 320px;
   height: auto;
   -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  -ms-flex: auto;
+  flex: auto;
   padding: 30px 0 20px;
   margin: 20px 10px;
 }
@@ -228,7 +228,7 @@ li {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   opacity: 0.3;
   -webkit-transition: all 1.5s ease;
   -o-transition: all 1.5s ease;
@@ -246,8 +246,8 @@ iframe,
   width: 100vw;
   height: 100vh;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   /* opacity: ; */
 }
 button {
@@ -269,8 +269,8 @@ button {
 
 button:hover {
   -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
 }
 .mt-md {
   margin-top: 30px;
