@@ -3,6 +3,7 @@ import addNav from "./nav";
 import { dessertAndDrinks } from "../menuObj/dessertAndDrinks";
 import addDishDescription from "./aboutDish";
 import backArrow from "../assets/images/arrow-left.svg";
+import addUpArrow from "./upArrow";
 import addMenu from "./menu";
 import { appetizer } from "../menuObj/appetizer";
 
@@ -75,4 +76,5 @@ export default function addAppetizer() {
   nav.prepend(backArrowImg);
   contentDiv.appendChild(heading);
   contentDiv.appendChild(parentDiv);
+  contentDiv.appendChild(addUpArrow(document.querySelector("nav")));
 }
