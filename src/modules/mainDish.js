@@ -2,6 +2,7 @@ import addNav from "./nav";
 
 import { mainDishes } from "../menuObj/mainDishes";
 import addDishDescription from "./aboutDish";
+import addUpArrow from "./upArrow";
 import backArrow from "../assets/images/arrow-left.svg";
 import addMenu from "./menu";
 
@@ -15,13 +16,14 @@ export default function addMainDish() {
   let parentDiv = document.createElement("div");
   let heading = document.createElement("h3");
   let backArrowImg = document.createElement("img");
+  let upArrowImg = document.createElement("img");
 
   backArrowImg.setAttribute("src", backArrow);
   backArrowImg.setAttribute("alt", "");
   backArrowImg.classList.add("back-arrow");
-  backArrowImg.addEventListener('click', () => {
+  backArrowImg.addEventListener("click", () => {
     addMenu();
-  })
+  });
 
   parentDiv.appendChild(heading);
 
@@ -74,4 +76,5 @@ export default function addMainDish() {
   nav.prepend(backArrowImg);
   contentDiv.appendChild(heading);
   contentDiv.appendChild(parentDiv);
+  contentDiv.appendChild(addUpArrow(document.querySelector("nav")));
 }
