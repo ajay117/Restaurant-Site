@@ -73,6 +73,15 @@ button {
   width: 30px;
   cursor: pointer;
 }
+.arrow-up {
+  width: 40px;
+  background-color: black;
+  opacity: 0.2;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
 .hamburger:active,
 .close-btn:active {
   width: 27px;
