@@ -370,7 +370,7 @@ button:hover {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1050px) {
   .hamburger,
   .close-btn {
     display: none;
