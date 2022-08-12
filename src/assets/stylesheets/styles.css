@@ -369,3 +369,23 @@ button:hover {
     display: none;
   }
 }
+
+@media screen and (min-width: 900px) {
+  .hamburger,
+  .close-btn {
+    display: none;
+  }
+  .menu-item {
+    position: static;
+    background-color: transparent;
+    opacity: 1;
+    flex: 2;
+  }
+  .menu-item ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .brand-name {
+    flex: 1;
+  }
+}
