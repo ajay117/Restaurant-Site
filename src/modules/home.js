@@ -13,7 +13,7 @@ export default function addHome() {
   let btn = document.createElement("button");
 
   heading.textContent = "Aj's Kitchen";
-  para.textContent = "Hangout Experience with great atmosphere";
+  para.textContent = "Hangout Experience with great atmosphere.";
 
   btn.textContent = "Explore";
   btn.classList.add('btn-info');
